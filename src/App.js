@@ -1,8 +1,7 @@
 import React from 'react';
 import {Route, Switch, Redirect, BrowserRouter} from 'react-router-dom';
-import './vendors/bootstrap/css/bootstrap.min.css';
-import './vendors/bootstrap/bootstrap.min.css';
-import './vendors/fontawesome/css/all.min.css';
+import "./vendors/bootstrap/dist/css/bootstrap.min.css";
+import "./vendors/font-awesome/css/font-awesome.min.css";
 import Signin from "./components/Login/login"
 import LandingPage from "./components/LandingPage";
 import Login from "./components/Login";
