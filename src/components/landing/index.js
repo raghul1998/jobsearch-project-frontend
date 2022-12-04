@@ -145,7 +145,7 @@ const LandingComponent = () => {
                     <div className="post-meta">
                       <p className="post-author">Jai</p>
                       <p className="post-date">
-                        <time datetime="2022-01-01">Feb 1, 2022</time>
+                        <time dateTime="2022-01-01">Feb 1, 2022</time>
                       </p>
                     </div>
                   </div>
@@ -174,7 +174,7 @@ const LandingComponent = () => {
                     <div className="post-meta">
                       <p className="post-author">Jai</p>
                       <p className="post-date">
-                        <time datetime="2022-01-01">Oct 5, 2022</time>
+                        <time dateTime="2022-01-01">Oct 5, 2022</time>
                       </p>
                     </div>
                   </div>
@@ -203,7 +203,7 @@ const LandingComponent = () => {
                     <div className="post-meta">
                       <p className="post-author">Jai</p>
                       <p className="post-date">
-                        <time datetime="2022-01-01">Dec 22, 2022</time>
+                        <time dateTime="2022-01-01">Dec 22, 2022</time>
                       </p>
                     </div>
                   </div>
