@@ -6,6 +6,7 @@ import "./vendors/bootstrap/css/bootstrap.min.css";
 import "./vendors/fontawesome/css/all.min.css";
 
 import LandingComponent from "./components/landing";
+import LoginComponent from "./components/login";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/home" element={<LandingComponent />} exact={true}></Route>
         <Route path="/" element={<LandingComponent />} exact={true}></Route>
+        <Route path="/login" element={<LoginComponent />} exact={true}></Route>
       </Routes>
     </BrowserRouter>
   );
