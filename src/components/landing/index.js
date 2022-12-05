@@ -30,7 +30,7 @@ const LandingComponent = () => {
                 <a href="#hero">Login</a>
               </li>
               <li>
-                <a href="#about">Signup</a>
+                <Link to = "/signupPage">Signup</Link>
               </li>
             </ul>
           </nav>
