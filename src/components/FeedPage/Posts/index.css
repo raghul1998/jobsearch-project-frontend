@@ -1,0 +1,9 @@
+.center-col {
+    flex: 1;
+    background: #aaa;
+    overflow-y: scroll;
+}
+.btn-outline-primary{
+    background-color: #F94062;
+    color: #F94062;
+}

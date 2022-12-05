@@ -1,16 +1,16 @@
 import React, {useEffect, useState} from "react";
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import moment from "moment";
 import './style.css';
-import {loginUser   } from '../../services/profileService';
+import {loginUser} from '../../services/profileService';
 import { alertService } from '../../services/alertService';
 
 const profileImages = require('../../constants/defaultProfileImages.json');
 
 const Login = () => {
-    let history = useHistory();
+    let navigate = useNavigate();
     localStorage.setItem('userId', '');
     localStorage.setItem('userRole', '');
 
@@ -36,7 +36,7 @@ const Login = () => {
                 localStorage.setItem('userRole', user["userRole"]);
                 localStorage.setItem('userName', user["firstName"] + " " + user["lastName"]);
                 localStorage.setItem('userImage', user['profileImage']);
-                history.push("/feedpage")
+                navigate("/feedpage");
             } else {
                 setSubmitting(false);
             }

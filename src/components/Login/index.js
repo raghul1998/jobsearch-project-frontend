@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import moment from "moment";
@@ -10,7 +10,7 @@ import { alertService } from '../../services/alertService';
 const profileImages = require('../../constants/defaultProfileImages.json');
 
 const Login = () => {
-    let history = useHistory();
+    let navigate = useNavigate();
     localStorage.setItem('userId', '');
     localStorage.setItem('userRole', '');
 
@@ -35,7 +35,7 @@ const Login = () => {
                 console.log(user);
                 localStorage.setItem('userId', user["_id"]);
                 localStorage.setItem('userRole', user["userRole"]);
-                history.push("/")
+                navigate("/");
             } else {
                 setSubmitting(false);
             }

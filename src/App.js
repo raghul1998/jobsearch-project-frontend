@@ -1,7 +1,9 @@
 import React from 'react';
-import {Route, Switch, Redirect, BrowserRouter} from 'react-router-dom';
-import "./vendors/bootstrap/dist/css/bootstrap.min.css";
-import "./vendors/font-awesome/css/font-awesome.min.css";
+import './App.css';
+import './vendors/bootstrap/css/bootstrap.min.css';
+import './vendors/bootstrap/bootstrap.min.css';
+import './vendors/fontawesome/css/all.min.css';
+
 import Signin from "./components/Login/login"
 import LandingPage from "./components/LandingPage";
 import Login from "./components/Login";
@@ -12,70 +14,53 @@ import PrivacyPolicy from "./components/PrivacyPolicy";
 import NewEvent from "./components/NewEvent";
 import Index from "./components/FeedPage";
 import today from "./reducers/today";
-import {Provider} from "react-redux";
-import {combineReducers, createStore} from "redux";
 import OrganizerEventsPage from "./components/OrganizerEventsPage";
 import EditProfile from "./components/EditProfile";
-import Testing from  "./components/Testing/test";
+import Testing from "./components/Testing/test";
 import NewPost from "./components/OrganizerEventsPage/NewPost";
 
+import {Provider} from "react-redux";
+import {combineReducers, createStore} from "redux";
+import {BrowserRouter} from 'react-router-dom';
+import {Routes, Route} from "react-router-dom";
 
 const reducer = combineReducers({today})
 const store = createStore(reducer);
 
-const App = () => {
-  return (
-      <Provider store={store}>
-        <BrowserRouter>
-          <Route path="/landing" exact={true}>
-            <LandingPage/>
-          </Route>
-          <Route path="/" exact={true}>
-            <Testing/>
-          </Route>
-          <Route path="/login" exact={true}>
-            <Login/>
-          </Route>
-          <Route path="/signin" exact={true}>
-            <Signin/>
-          </Route>
-          <Route path="/register" exact={true}>
-            <Register/>
-          </Route>
-          <Route path="/signup" exact={true}>
-            <SignUp/>
-          </Route>
-          <Route path="/forgotpassword" exact={true}>
-            <ForgotPassword/>
-          </Route>
-          <Route path="/privacy-policy" exact={true}>
-            <PrivacyPolicy/>
-          </Route>
-          <Route path="/feedpage" exact={true}>
-            <Index/>
-          </Route>
+function App() {
+    return (
+        <Provider store={store}>
+            <BrowserRouter>
+                <Routes>
+                    <Route index path="/landing" element={<LandingPage/>}/>
 
-          <Route path="/new-event" exact={true}>
-            {/*<NewEventPage/>*/}
-            <NewEvent/>
-          </Route>
+                    <Route index path="/" element={<Testing/>}/>
 
-          <Route path="/event" exact={true}>
-            <OrganizerEventsPage/>
-          </Route>
+                    <Route index path="/login" element={<Login/>}/>
 
-          <Route path="/edit-profile" exact={true}>
-            <EditProfile/>
-          </Route>
+                    <Route index path="/signin" element={<Signin/>}/>
 
-          <Route path="/event-new-post" exact={true}>
-            <NewPost/>
-          </Route>
+                    <Route index path="/register" element={<Register/>}/>
 
+                    <Route index path="/signup" element={<SignUp/>}/>
 
-        </BrowserRouter>
-      </Provider>
-  );
-};
+                    <Route index path="/forgotpassword" element={<ForgotPassword/>}/>
+
+                    <Route index path="/privacy-policy" element={<PrivacyPolicy/>}/>
+
+                    <Route index path="/feedpage" element={<Index/>}/>
+
+                    <Route index path="/new-event" element={<NewEvent/>}/>
+
+                    <Route index path="/event" element={<OrganizerEventsPage/>}/>
+
+                    <Route index path="/edit-profile" element={<EditProfile/>}/>
+
+                    <Route index path="/event-new-post" element={<NewPost/>}/>
+                </Routes>
+            </BrowserRouter>
+        </Provider>
+    );
+}
 
 export default App;
