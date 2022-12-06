@@ -5,6 +5,7 @@ import "./signUp.css";
 import {Link, useHistory} from "react-router-dom";
 import * as alertService from "react-dom/test-utils";
 import setUpProfile from "../../service/userService";
+import {createUser} from "../../service/userThunks.js"
 
 const SignUp = () => {
 
@@ -43,15 +44,15 @@ const SignUp = () => {
             "role": role
         }
 
-        // TODO: Implement this.
-        setUpProfile(user).then(() => {
-                // alertService.success('Sign Up was  successful', { keepAfterRouteChange: true });
-                // history.push('/signin');
-            }).catch(error => {
-                setSubmitting(false);
-                // alertService.error(error);
-            });
-
+        createUser(user).then(() => {
+            // alertService.success('Sign Up was  successful', { keepAfterRouteChange: true });
+            // history.push('/signin');
+            console.log("User created");
+        }).catch(error => {
+            setSubmitting(false);
+            // alertService.error(error);
+            console.log("Error submitting the user");
+        });
     }
 
     const defaultValue = {
