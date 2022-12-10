@@ -4,6 +4,8 @@ import "../../assets/css-dashboard/w3-theme-blue-grey.css";
 import "../../assets/css-dashboard/css.css";
 import "./dashboard.css";
 import {useHistory} from "react-router-dom";
+import Profile from "./profile";"./profile/index";
+import TodaysEventList from "./todayEvents/index";
 
 const Index = () => {
     const userRole = localStorage.getItem('userRole');
@@ -17,14 +19,14 @@ const Index = () => {
         <>
             <div className="row mt-2 wap-outer-feed mb-5">
                 <div className="col-12">
-                    {/*  code for navigation sidebar */}
+                    <NavigationSidebar/>
                 </div>
             </div>
             <div className="row mt-2 wap-outer-feed">
                 <div className="row mt-4">
                     <div className="d-sm-none d-md-none d-lg-block col-lg-3 col-xl-3 ps-5 pe-5">
                         <div className="row pb-5">
-                            {/*  code for profile */}
+                        <Profile/>
                         </div>
                         <div className="row pt-5">
                             {
@@ -41,9 +43,10 @@ const Index = () => {
                     </div>
                     <div className="col-10 col-md-10 col-lg-7 col-xl-6">
                        {/* code for posts*/}
+                       middle content
                     </div>
                     <div className="d-sm-none d-md-none d-lg-block col-lg-2 col-xl-3">
-                        {/* code for today events*/}
+                        <TodaysEventList/>
                     </div>
                 </div>
             </div>

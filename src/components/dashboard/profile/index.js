@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import "./index.css";
 import {useHistory} from "react-router-dom";
-import {getPresentUser} from "../../../services/profileService";
+import {getPresentUser} from "../../../service/profileService";
 
 const profile = () => {
     const [presentUser, setPresentUser] = useState(null);
@@ -50,4 +50,4 @@ const profile = () => {
         </>
     );
 }
-export default NewFeedProfile;
+export default profile;
