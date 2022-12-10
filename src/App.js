@@ -7,6 +7,7 @@ import "./vendors/fontawesome/css/all.min.css";
 
 import LandingComponent from "./components/landing";
 import SignUpPage from "./components/signup/signup.js"
+import DashboardComponent from "./components/dashboard/index.js"
 
 function App() {
   return (

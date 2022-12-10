@@ -7,7 +7,7 @@ import {useHistory} from "react-router-dom";
 import Profile from "./profile";"./profile/index";
 import TodaysEventList from "./todayEvents/index";
 
-const Index = () => {
+const dashboard = () => {
     const userRole = localStorage.getItem('userRole');
     let history = useHistory();
     
@@ -55,4 +55,4 @@ const Index = () => {
         )
         };
 
-export default Index;
+export default dashboard;
