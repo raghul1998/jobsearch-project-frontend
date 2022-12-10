@@ -48,7 +48,7 @@ const LandingComponent = () => {
                 A place where dream <span>meets</span>
                 <span className="circle"> reality</span>
               </h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+              <p>Let us help you to find your perfect opportunity!!!</p>
             </div>
           </div>
         </div>
@@ -59,7 +59,10 @@ const LandingComponent = () => {
           <div className="container" data-aos="fade-up">
             <div className="section-header">
               <h2>About Us</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+              <p>
+                CareerGenie is designed where job posts can be created and
+                viewed to land your dream job
+              </p>
             </div>
 
             <div className="row gy-4">
@@ -73,40 +76,44 @@ const LandingComponent = () => {
               <div className="col-lg-8">
                 <div className="content ps-0 ps-lg-5">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Xonsectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua.
+                    CareerGenie helps to connect the students who are new to the
+                    field to have exclusive and immediate access to the jobs
+                    that are available in the market. This gives an edge over
+                    their other competitors in the field by giving them
+                    opportunity to be the first in the line of applicants and be
+                    viewed in a broder perspective.
                   </p>
                   <ul>
                     <li>
-                      <i className="bi bi-1-square"></i> Nemo enim ipsam
-                      voluptatem quia voluptas sit aspernatur aut odit aut
-                      fugit.
+                      <i className="bi bi-1-square"></i> Three different user
+                      roles for students, recruiters and special university
+                      access.
                     </li>
                     <li>
-                      <i className="bi bi-2-square"></i> Sed quia consequuntur
-                      magni dolores eos qui ratione voluptatem sequi nesciunt.
+                      <i className="bi bi-2-square"></i> Students can view the
+                      job posts and select the jobs to apply.
                     </li>
                     <li>
-                      <i className="bi bi-3-square"></i> Neque porro quisquam
-                      est, qui dolorem ipsum quia dolor sit amet.
+                      <i className="bi bi-3-square"></i> Recruiters can create
+                      the job post and view the applied students stats.
                     </li>
                     <li>
-                      <i className="bi bi-4-square"></i> Consectetur, adipisci
-                      velit, sed quia non numquam eius.
+                      <i className="bi bi-4-square"></i> University also has
+                      exclusive access to create job posts on behalf of the
+                      company or recruiters.
                     </li>
                     <li>
-                      <i className="bi bi-5-square"></i> Rempora incidunt ut
-                      labore et dolore magnam aliquam quaerat voluptatem.{" "}
+                      <i className="bi bi-5-square"></i> All users can see the
+                      applied count in the posts.
                     </li>
                     <li>
-                      <i className="bi bi-6-square"></i> Sed do eiusmod tempor
-                      incididunt ut labore et dolore
+                      <i className="bi bi-6-square"></i> The user can also edit
+                      their profile using edit option provided in the dashboard.
                     </li>
                     <li>
-                      <i className="bi bi-7-square"></i> Enim ad minima veniam,
-                      quis nostrum exercitationem ullam corporis.
+                      <i className="bi bi-7-square"></i> Search option helps to
+                      search for a desired job post and a separate filter is
+                      enabled for todays posts.
                     </li>
                   </ul>
                 </div>
@@ -117,9 +124,23 @@ const LandingComponent = () => {
 
         <section id="recent-posts" className="recent-posts sections-bg">
           <div className="container" data-aos="fade-up">
+            <div id="schedule" className="section-with-bg">
+              <div className="container">
+                <div className="section-header">
+                  <br />
+                  <h2>Trending job posts</h2>
+                  <p>Here is our recent posts that are trending...</p>
+                </div>
+                {/* <TodaysEvents /> */}
+              </div>
+            </div>
+
             <div className="section-header">
               <h2>Recent Blog Posts</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+              <p>
+                Trending top 3 blogs on the internet about{" "}
+                <b>#jobs#usa#students</b>(Source: Yahoo Search)
+              </p>
             </div>
 
             <div className="row gy-4">
@@ -127,25 +148,57 @@ const LandingComponent = () => {
                 <article>
                   <div className="post-img">
                     <img
-                      src={require(`../../assets/images/jobCanvasImg.jpg`)}
+                      src={require(`../../assets/images/usajob.png`)}
                       alt=""
                       className="img-fluid"
                     />
                   </div>
 
-                  <p className="post-category">Lorem ipsum dolor</p>
+                  <p className="post-category">Technology</p>
 
                   <h2 className="title">
-                    <a href="blog-details.html">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+                    <a href="https://www.theguardian.com/business/2022/dec/02/us-jobs-report-november-unemployment-rate">
+                      US adds 263,000 jobs in November as unemployment rate
+                      stays at 3.7%
                     </a>
                   </h2>
 
                   <div className="d-flex align-items-center">
                     <div className="post-meta">
-                      <p className="post-author">Jai</p>
+                      <p className="post-author">Guardian</p>
                       <p className="post-date">
-                        <time dateTime="2022-01-01">Feb 1, 2022</time>
+                        <time dateTime="2022-01-01">Dec 1, 2022</time>
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div className="col-xl-4 col-md-6">
+                <article>
+                  <div className="post-img">
+                    <img
+                      src={require(`../../assets/images/dollars.png`)}
+                      alt=""
+                      className="img-fluid"
+                    />
+                  </div>
+
+                  <p className="post-category">Finance</p>
+
+                  <h2 className="title">
+                    <a href="https://www.investopedia.com/personal-finance/top-highest-paying-jobs/">
+                      25 Highest Paid Occupations in the US
+                    </a>
+                  </h2>
+
+                  <div className="d-flex align-items-center">
+                    <div className="post-meta">
+                      <p className="post-author">
+                        U.S. Bureau of Labor Statistics
+                      </p>
+                      <p className="post-date">
+                        <time dateTime="2022-01-01">Dec 5, 2022</time>
                       </p>
                     </div>
                   </div>
@@ -162,48 +215,20 @@ const LandingComponent = () => {
                     />
                   </div>
 
-                  <p className="post-category">Loreum</p>
+                  <p className="post-category">Jobs</p>
 
                   <h2 className="title">
-                    <a href="blog-details.html">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+                    <a href="https://www.upgradabroad.com/articles/part-time-jobs-in-usa/">
+                      Part-Time Jobs in the USA for Indian & International
+                      Students
                     </a>
                   </h2>
 
                   <div className="d-flex align-items-center">
                     <div className="post-meta">
-                      <p className="post-author">Jai</p>
+                      <p className="post-author"></p>
                       <p className="post-date">
-                        <time dateTime="2022-01-01">Oct 5, 2022</time>
-                      </p>
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <div className="col-xl-4 col-md-6">
-                <article>
-                  <div className="post-img">
-                    <img
-                      src={require(`../../assets/images/jobCanvasImg.jpg`)}
-                      alt=""
-                      className="img-fluid"
-                    />
-                  </div>
-
-                  <p className="post-category">Loreum</p>
-
-                  <h2 className="title">
-                    <a href="blog-details.html">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit?
-                    </a>
-                  </h2>
-
-                  <div className="d-flex align-items-center">
-                    <div className="post-meta">
-                      <p className="post-author">Jai</p>
-                      <p className="post-date">
-                        <time dateTime="2022-01-01">Dec 22, 2022</time>
+                        <time dateTime="2022-01-01">Dec 12, 2022</time>
                       </p>
                     </div>
                   </div>
@@ -217,7 +242,6 @@ const LandingComponent = () => {
           <div className="container" data-aos="fade-up">
             <div className="section-header">
               <h2>Our Team</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
             </div>
 
             <div className="row gy-4">
@@ -246,7 +270,7 @@ const LandingComponent = () => {
                     className="img-fluid"
                     alt=""
                   />
-                  <h4>Jai</h4>
+                  <h4>Jai Iyyappa Vignesh Manivannan</h4>
                 </div>
               </div>
 
@@ -275,7 +299,7 @@ const LandingComponent = () => {
                     className="img-fluid"
                     alt=""
                   />
-                  <h4>Jai1</h4>
+                  <h4>Raghul S</h4>
                 </div>
               </div>
 
@@ -304,7 +328,7 @@ const LandingComponent = () => {
                     className="img-fluid"
                     alt=""
                   />
-                  <h4>Jai2</h4>
+                  <h4>Karthik Tickoo</h4>
                 </div>
               </div>
 
@@ -333,7 +357,7 @@ const LandingComponent = () => {
                     className="img-fluid"
                     alt=""
                   />
-                  <h4>Ati2</h4>
+                  <h4>Subhankar Shah</h4>
                 </div>
               </div>
             </div>

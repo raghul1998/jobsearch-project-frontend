@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Formik, Field, Form, ErrorMessage } from "formik";
-
+// import { loginUser } from "../../service/userThunks";
+import { loginUser } from "../../service/userThunks.js";
 import "./index.css";
 import * as Yup from "yup";
 
 const LoginComponent = () => {
-  // let history = useHistory();
-  // localStorage.setItem("userId", "");
-  // localStorage.setItem("userRole", "");
+  let navigate = useNavigate();
+  localStorage.setItem("userId", "");
+  localStorage.setItem("userRole", "");
 
   const initialLoginParams = {
     email: "",
@@ -23,21 +24,22 @@ const LoginComponent = () => {
   });
 
   function onSubmit(fields, { setStatus, setSubmitting }) {
-    // setStatus();
-    // loginUser(fields["email"], fields["password"]).then((user) => {
-    //   if (user != null) {
-    //     // localStorage.setItem("userId", user["_id"]);
-    //     // localStorage.setItem("userRole", user["userRole"]);
-    //     // localStorage.setItem(
-    //     //   "userName",
-    //     //   user["firstName"] + " " + user["lastName"]
-    //     // );
-    //     // localStorage.setItem("userImage", user["profileImage"]);
-    //     // history.push("/feedpage");
-    //   } else {
-    //     setSubmitting(false);
-    //   }
-    // });
+    setStatus();
+    loginUser(fields["email"], fields["password"]).then((user) => {
+      if (user != null) {
+        localStorage.setItem("userId", user["_id"]);
+        localStorage.setItem("userRole", user["email"]);
+        localStorage.setItem(
+          "userName",
+          user["firstName"] + " " + user["lastName"]
+        );
+        localStorage.setItem("userImage", user["profileImage"]);
+        console.log("Navigate to the dashboard test in success");
+        navigate("/signupPage");
+      } else {
+        setSubmitting(false);
+      }
+    });
   }
   return (
     <>
