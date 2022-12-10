@@ -52,7 +52,7 @@ const LoginComponent = () => {
                 />
               </figure>
               <div style={{ textAlign: "center" }} className="ps-5">
-                <Link style={{ textDecoration: "none" }} to="/signup">
+                <Link style={{ textDecoration: "none" }} to="/signupPage">
                   {" "}
                   No account? Signup here
                 </Link>
