@@ -14,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/signupPage" element={<SignUpPage />} exact={true}></Route>
         <Route path="/home" element={<LandingComponent />} exact={true}></Route>
+        <Route path="/dashboard" element={<DashboardComponent />} exact={true}></Route>
         <Route path="/" element={<LandingComponent />} exact={true}></Route>
       </Routes>
     </BrowserRouter>

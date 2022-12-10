@@ -1,5 +1,5 @@
-const CREATE_USER_API = 'http://localhost:4000/api/user';
 import axios from 'axios';
+const CREATE_USER_API = 'http://localhost:4000/api/user';
 
 export const setUpProfile = async (profile) => {
     const response = await axios.post(CREATE_USER_API, profile)
