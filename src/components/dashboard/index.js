@@ -1,4 +1,8 @@
 import React from "react";
+import "../../assets/css-dashboard/w3.css";
+import "../../assets/css-dashboard/w3-theme-blue-grey.css";
+import "../../assets/css-dashboard/css.css";
+import "./dashboard.css";
 import {useHistory} from "react-router-dom";
 
 const Index = () => {
