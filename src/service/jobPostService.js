@@ -17,3 +17,8 @@ export const searchJob = async (filter) => {
     const response = await axios.get(`${JOB_API}/${filter}`);
     return response.data;
 }
+
+export const getJobByID = async (id) => {
+    const response = await axios.get(`${JOB_API}/${id}/fetch`);
+    return response.data;
+}
