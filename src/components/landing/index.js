@@ -27,10 +27,10 @@ const LandingComponent = () => {
           <nav id="navbar" className="navbar">
             <ul>
               <li>
-                <a href="#hero">Login</a>
+                <Link to="/login">Login</Link>
               </li>
               <li>
-                <Link to = "/signupPage">Signup</Link>
+                <Link to="/signupPage">Signup</Link>
               </li>
             </ul>
           </nav>

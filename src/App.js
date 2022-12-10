@@ -6,7 +6,7 @@ import "./vendors/bootstrap/css/bootstrap.min.css";
 import "./vendors/fontawesome/css/all.min.css";
 
 import LandingComponent from "./components/landing";
-import SignUpPage from "./components/signup/signup.js"
+import SignUpPage from "./components/signup/signup.js";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
         <Route path="/signupPage" element={<SignUpPage />} exact={true}></Route>
         <Route path="/home" element={<LandingComponent />} exact={true}></Route>
         <Route path="/" element={<LandingComponent />} exact={true}></Route>
+        <Route path="/login" element={<LoginComponent />} exact={true}></Route>
       </Routes>
     </BrowserRouter>
   );
