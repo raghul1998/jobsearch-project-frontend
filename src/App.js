@@ -6,6 +6,7 @@ import "./vendors/bootstrap/css/bootstrap.min.css";
 import "./vendors/fontawesome/css/all.min.css";
 
 import LandingComponent from "./components/landing";
+import LoginComponent from "./components/login";
 import SignUpPage from "./components/signup/signup.js";
 
 function App() {
