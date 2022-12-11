@@ -21,8 +21,8 @@ const NavigationBar = () => {
                     <a className="w3-bar-item w3-hide-medium w3-hide-large w3-right w3-padding-large w3-large w3-theme-d2" href="javascript:void(0);">
                         <i className="fa fa-bars"/>
                     </a>
-                    <Link to="/feedpage" className="w3-bar-item w3-padding-large w3-theme-d4 remove-underline">
-                        <i className="fa fa-home w3-margin-right"></i> WhatsAppening
+                    <Link to="/dashboard" className="w3-bar-item w3-padding-large w3-theme-d4 remove-underline">
+                        <i className="fa fa-home w3-margin-right"></i> Career Genie
                     </Link>
                     <button onClick={() => logoutUser()} className="btn btn-primary w3-right pt-3">
                         Logout

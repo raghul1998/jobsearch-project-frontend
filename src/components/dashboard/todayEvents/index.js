@@ -7,21 +7,21 @@ const TodaysEventList = () => {
     d.setDate(d.getDate());
 
     const [posts, setPosts] = useState(null);
-    // useEffect(() => {
-    //     getAllEvents().then((events) => {
-    //         setPosts(events);
-    //     }).catch((error) => {
-    //         setPosts(null);
-    //     });
-    // },[])
+    useEffect(() => {
+        getAllEvents().then((events) => {
+            setPosts(events);
+        }).catch((error) => {
+            setPosts(null);
+        });
+    },[])
 
-    // useEffect(() =>  {
-    //     getAllEvents()
-    //         .then(posts => setPosts(posts))
-    //         .catch((error) => {
-    //             console.log("Error")
-    //         })
-    // }, []);
+    useEffect(() =>  {
+        getAllEvents()
+            .then(posts => setPosts(posts))
+            .catch((error) => {
+                console.log("Error")
+            })
+    }, []);
     return (
         <>
             <h3 className="text-white">Today's Events</h3>
