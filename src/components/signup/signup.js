@@ -2,16 +2,17 @@ import * as Yup from "yup";
 import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import "./signUp.css";
-import { Link, useHistory } from "react-router-dom";
-import * as alertService from "react-dom/test-utils";
-import setUpProfile from "../../service/userService";
+import { Link } from "react-router-dom";
 import { createUser } from "../../service/userThunks.js";
+import { alertService } from '../../service/alertService';
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
+  let history = useNavigate();
   const schemaForValidataion = Yup.object().shape({
     firstName: Yup.string().required("Please enter first Name"),
     lastName: Yup.string().required("Please enter Last Name"),
-    dob: Yup.string().required("Please enter Date Of Birth"),
+    dateOfBirth: Yup.string().required("Please enter Date Of Birth"),
     email: Yup.string().email("Please enter a valid email"),
     password: Yup.string()
       .min(4, "Please enter at least characters of length 4")
@@ -19,14 +20,14 @@ const SignUp = () => {
     matchPassword: Yup.string()
       .oneOf([Yup.ref("password"), null], "Please enter the same password")
       .required("Confirm Password is required"),
-    role: Yup.string().required("Please enter the role."),
+    userRole: Yup.string().required("Please enter the role."),
     termsAgreed: Yup.bool().oneOf(
       [true],
       "Please accept to the terms and condition"
     ),
-    number: Yup.number().required("Please enter your number"),
-    sex: Yup.string().required("Please enter your sex"),
-    level: Yup.string().required("What is your level"),
+    phoneNumber: Yup.number().required("Please enter your number"),
+    gender: Yup.string().required("Please enter your gender"),
+    currentGradLevel: Yup.string().required("What is your level"),
   });
 
   function submitForm(input, { setStatus, setSubmitting }) {
@@ -35,29 +36,29 @@ const SignUp = () => {
     let profileImage =
       "https://www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png";
 
-    let role = input["role"].toString().toLowerCase();
+    let userRole = input["userRole"].toString().toLowerCase();
     const user = {
       firstName: input["firstName"],
       lastName: input["lastName"],
-      dob: input["dob"],
+      dateOfBirth: input["dateOfBirth"],
       email: input["email"],
       password: input["password"],
-      image: profileImage,
-      number: input["number"],
-      sex: input["sex"].toString().toLowerCase(),
-      level: input["level"].toString().toLowerCase(),
-      role: role,
+      profileImage: profileImage,
+      phoneNumber: input["phoneNumber"],
+      gender: input["gender"].toString().toLowerCase(),
+      currentGradLevel: input["currentGradLevel"].toString().toLowerCase(),
+      userRole: userRole,
     };
-
+    // debugger;
     createUser(user)
       .then(() => {
-        // alertService.success('Sign Up was  successful', { keepAfterRouteChange: true });
-        // history.push('/signin');
+        alertService.success('Sign Up was  successful', { keepAfterRouteChange: true });
+        history('/login');
         console.log("User created");
       })
       .catch((error) => {
         setSubmitting(false);
-        // alertService.error(error);
+        alertService.error(error);
         console.log("Error submitting the user");
       });
   }
@@ -65,16 +66,16 @@ const SignUp = () => {
   const defaultValue = {
     firstName: "",
     lastName: "",
-    dob: "",
+    dateOfBirth: "",
     email: "",
     password: "",
     matchPassword: "",
-    role: "",
+    userRole: "",
     termsAgreed: true,
-    number: "",
-    sex: "",
-    level: "",
-    imageOfProfile: "",
+    phoneNumber: "",
+    gender: "",
+    currentGradLevel: "",
+    profileImage: "",
   };
 
   return (
@@ -146,45 +147,45 @@ const SignUp = () => {
                     <div className="signup-group">
                       <div className="row">
                         <div className="col-6">
-                          <label htmlFor="dob">
+                          <label htmlFor="dateOfBirth">
                             <i className=""></i>
                           </label>
                           <Field
-                            name="dob"
+                            name="dateOfBirth"
                             type="date"
                             className={
                               "form-control" +
-                              (errors.dob && touched.dob ? " is-invalid" : "")
+                              (errors.dateOfBirth && touched.dateOfBirth ? " is-invalid" : "")
                             }
                           />
                           <ErrorMessage
-                            name="dob"
+                            name="dateOfBirth"
                             component="div"
                             className="invalid-feedback"
                           />
                         </div>
                         <div className="col-6">
-                          <label htmlFor="sex">
+                          <label htmlFor="gender">
                             <i className="material-icons-name"></i>
                           </label>
                           <Field
                             type="text"
-                            name="sex"
+                            name="gender"
                             as="select"
-                            id="sex"
-                            placeholder="sex"
+                            id="gender"
+                            placeholder="gender"
                             className={
                               "form-control" +
-                              (errors.sex && touched.sex ? " is-invalid" : "")
+                              (errors.gender && touched.gender ? " is-invalid" : "")
                             }
                           >
                             <option value="">Gender</option>
-                            <option value="M">M</option>
-                            <option value="F">F</option>
+                            <option value="M">Male</option>
+                            <option value="F">Female</option>
                             <option value="non-binary">Non binary</option>
                           </Field>
                           <ErrorMessage
-                            name="sex"
+                            name="gender"
                             component="div"
                             className="invalid-feedback"
                           />
@@ -194,13 +195,13 @@ const SignUp = () => {
                     <div className="signup-group">
                       <div className="row">
                         <div className="col-6">
-                          <label htmlFor="role">
+                          <label htmlFor="userRole">
                             <i className=""></i>
                           </label>
                           <Field
-                            name="role"
+                            name="userRole"
                             type="text"
-                            id="role"
+                            id="userRole"
                             placeholder="Role"
                             as="select"
                             className={
@@ -220,24 +221,24 @@ const SignUp = () => {
                             </option>
                           </Field>
                           <ErrorMessage
-                            name="role"
+                            name="userRole"
                             component="div"
                             className="invalid-feedback"
                           />
                         </div>
                         <div className="col-6">
-                          <label htmlFor="level">
+                          <label htmlFor="currentGradLevel">
                             <i className="material-icons-name"></i>
                           </label>
                           <Field
                             type="text"
-                            name="level"
-                            id="level"
-                            placeholder="level"
+                            name="currentGradLevel"
+                            id="currentGradLevel"
+                            placeholder="currentGradLevel"
                             as="select"
                             className={
                               "form-control" +
-                              (errors.level && touched.level
+                              (errors.currentGradLevel && touched.currentGradLevel
                                 ? " is-invalid"
                                 : "")
                             }
@@ -247,7 +248,7 @@ const SignUp = () => {
                             <option value="graduate">Graduate</option>
                           </Field>
                           <ErrorMessage
-                            name="level"
+                            name="currentGradLevel"
                             component="div"
                             className="invalid-feedback"
                           />
@@ -255,18 +256,18 @@ const SignUp = () => {
                       </div>
                     </div>
                     <div className="signup-group">
-                      <label htmlFor="number">
+                      <label htmlFor="phoneNumber">
                         <i className=""></i>
                       </label>
                       <Field
                         className={
                           "form-control" +
-                          (errors.number && touched.number ? " is-invalid" : "")
+                          (errors.phoneNumber && touched.phoneNumber ? " is-invalid" : "")
                         }
                         type="number"
-                        name="number"
-                        id="number"
-                        placeholder="Number"
+                        name="phoneNumber"
+                        id="phoneNumber"
+                        placeholder="phoneNumber"
                       />
                       <ErrorMessage
                         name="phoneNumber"

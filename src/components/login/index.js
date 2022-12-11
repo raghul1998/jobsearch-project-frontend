@@ -28,14 +28,14 @@ const LoginComponent = () => {
     loginUser(fields["email"], fields["password"]).then((user) => {
       if (user != null) {
         localStorage.setItem("userId", user["_id"]);
-        localStorage.setItem("userRole", user["email"]);
+        localStorage.setItem("userRole", user["userRole"]);
         localStorage.setItem(
           "userName",
           user["firstName"] + " " + user["lastName"]
         );
         localStorage.setItem("userImage", user["profileImage"]);
         console.log("Navigate to the dashboard test in success");
-        navigate("/signupPage");
+        navigate("/dashboard");
       } else {
         setSubmitting(false);
       }
