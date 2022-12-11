@@ -6,6 +6,7 @@ import "./index.css";
 import "./style.css";
 import { createEvent } from "../../service/eventService";
 import { alertService } from "../../service/alertService";
+import UploadImageAws from "../uploadImageAws";
 // import UploadImageToS3WithNativeSdk from "../UploadImageToS3WithNativeSdk/index";
 // import UploadImageToS3WithReactS3 from '../UploadImageToS3WithReactS3/index';
 import NavigationBar from "../dashboard/navigationSidebar/index";
@@ -236,7 +237,7 @@ const NewEvent = () => {
                           <br />
                           <br />
                           <br />
-                          {/* <UploadImageToS3WithNativeSdk/> */}
+                          <UploadImageAws />
                         </div>
                       </div>
 

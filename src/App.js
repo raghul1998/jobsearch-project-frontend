@@ -30,7 +30,9 @@ function App() {
         ></Route>
         <Route path="/" element={<LandingComponent />} exact={true}></Route>
         <Route path="/login" element={<LoginComponent />} exact={true}></Route>
-        <Route path="/job-event" element={<IndividualJob/>} exact={true}> </Route>
+        <Route path="/job-event" element={<IndividualJob />} exact={true}>
+          {" "}
+        </Route>
         <Route
           path="/edit-profile"
           element={<EditProfile />}
