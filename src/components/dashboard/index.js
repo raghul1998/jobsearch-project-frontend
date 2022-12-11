@@ -5,15 +5,16 @@ import "../../assets/css-dashboard/css.css";
 import "./dashboard.css";
 import Profile from "./profile/index";
 import TodaysEventList from "./todayEvents/index";
-import { useNavigate } from 'react-router-dom';
+
 import NavigationBar from "./navigationSidebar";
 
 const dashboard = () => {
+    
+    // debugger;
     const userRole = localStorage.getItem('userRole');
-    let history = useNavigate();
     
     const goToNewEventPage = () => {
-      history("/new-event");
+    //   history("/new-event");
     }
 
     return(

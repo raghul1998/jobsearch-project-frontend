@@ -6,8 +6,10 @@ import { useNavigate } from 'react-router-dom';
 const Profile = () => {
     const [presentUser, setPresentUser] = useState(null);
     const history = useNavigate();
+    // 
 
     useEffect(() => {
+        console.log("ninside");
         let userId = localStorage.getItem('userId').toString();
         getPresentUser(userId).then((user) => {
             setPresentUser(user);
@@ -22,7 +24,7 @@ const Profile = () => {
     }
     return(
         <>
-            {
+            {presentUser != null &&
             <div className="row mt-auto ">
                 <div className="col-xl-12 col-lg-12 col-md-6 col-sm-6 mt-80">
                     <div className="card bg-white">

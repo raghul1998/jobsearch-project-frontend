@@ -232,7 +232,7 @@ body {
     font-weight: 400;
     font-family: Poppins; }
 
-.container {
+.dashboard .container {
     width: 900px;
     background: #fff;
     margin: 0 auto;
@@ -548,11 +548,11 @@ label.valid:after {
     margin-top: 10px; }
 
 @media screen and (max-width: 1200px) {
-    .container {
+    .dashboard .container {
         width: calc( 100% - 30px);
         max-width: 100%; } }
 @media screen and (min-width: 1024px) {
-    .container {
+    .dashboard .container {
         max-width: 1200px; } }
 @media screen and (max-width: 768px) {
     .signup-content, .signin-content {

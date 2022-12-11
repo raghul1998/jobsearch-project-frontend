@@ -1,6 +1,6 @@
 const PROFILE_API = 'https://whatsappening-backend.herokuapp.com/register/user';
 const LOGIN_API = 'https://whatsappening-backend.herokuapp.com/login/user'
-const USER_SEARCH_API = 'https://whatsappening-backend.herokuapp.com/user';
+const USER_SEARCH_API = 'http://localhost:4000/api/user';
 const ALL_USERS_API = 'https://whatsappening-backend.herokuapp.com/user';
 
 export const createUser = (newUser) => {
