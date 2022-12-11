@@ -1,5 +1,5 @@
-const EVENT_API = 'https://whatsappening-backend.herokuapp.com/event';
-const LATEST_POSTS_API = 'https://whatsappening-backend.herokuapp.com/latestposts';
+const EVENT_API = 'http://localhost:4000/event';
+const LATEST_POSTS_API = 'http://localhost:4000/latestposts';
 
 export const createEvent = (newEvent) =>{
     return(

@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-import logo from "./logo.svg";
 import "./App.css";
 import "./vendors/bootstrap/css/bootstrap.min.css";
 import "./vendors/fontawesome/css/all.min.css";
@@ -10,6 +9,7 @@ import DashboardComponent from "./components/dashboard/index.js";
 import LoginComponent from "./components/login";
 import SignUpPage from "./components/signup/signup.js";
 import EditProfile from "./components/dashboard/editProfile/index.js";
+import NewEventComponent from "./components/new-event/index";
 
 function App() {
   return (
@@ -20,6 +20,11 @@ function App() {
         <Route
           path="/dashboard"
           element={<DashboardComponent />}
+          exact={true}
+        ></Route>
+        <Route
+          path="/new-event"
+          element={<NewEventComponent />}
           exact={true}
         ></Route>
         <Route path="/" element={<LandingComponent />} exact={true}></Route>
