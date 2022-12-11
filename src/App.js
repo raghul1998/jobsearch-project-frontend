@@ -6,8 +6,9 @@ import "./vendors/bootstrap/css/bootstrap.min.css";
 import "./vendors/fontawesome/css/all.min.css";
 
 import LandingComponent from "./components/landing";
-import SignUpPage from "./components/signup/signup.js"
-import DashboardComponent from "./components/dashboard/index.js"
+import DashboardComponent from "./components/dashboard/index.js";
+import LoginComponent from "./components/login";
+import SignUpPage from "./components/signup/signup.js";
 
 function App() {
   return (
@@ -15,8 +16,13 @@ function App() {
       <Routes>
         <Route path="/signupPage" element={<SignUpPage />} exact={true}></Route>
         <Route path="/home" element={<LandingComponent />} exact={true}></Route>
-        <Route path="/dashboard" element={<DashboardComponent />} exact={true}></Route>
+        <Route
+          path="/dashboard"
+          element={<DashboardComponent />}
+          exact={true}
+        ></Route>
         <Route path="/" element={<LandingComponent />} exact={true}></Route>
+        <Route path="/login" element={<LoginComponent />} exact={true}></Route>
       </Routes>
     </BrowserRouter>
   );
