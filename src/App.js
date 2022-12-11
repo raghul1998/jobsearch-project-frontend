@@ -9,6 +9,7 @@ import LandingComponent from "./components/landing";
 import DashboardComponent from "./components/dashboard/index.js";
 import LoginComponent from "./components/login";
 import SignUpPage from "./components/signup/signup.js";
+import EditProfile from "./components/dashboard/editProfile/index.js";
 
 function App() {
   return (
@@ -23,6 +24,11 @@ function App() {
         ></Route>
         <Route path="/" element={<LandingComponent />} exact={true}></Route>
         <Route path="/login" element={<LoginComponent />} exact={true}></Route>
+        <Route
+          path="/edit-profile"
+          element={<EditProfile />}
+          exact={true}
+        ></Route>
       </Routes>
     </BrowserRouter>
   );
