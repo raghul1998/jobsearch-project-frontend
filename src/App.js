@@ -9,6 +9,7 @@ import DashboardComponent from "./components/dashboard/index.js";
 import LoginComponent from "./components/login";
 import SignUpPage from "./components/signup/signup.js";
 import NewEventComponent from "./components/new-event/index";
+import IndividualJob from "./components/dashboard/joblist/individualjob";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/new-event" element={<NewEventComponent />} exact={true}></Route>
         <Route path="/" element={<LandingComponent />} exact={true}></Route>
         <Route path="/login" element={<LoginComponent />} exact={true}></Route>
+        <Route path="/job-event" element={<IndividualJob/>} exact={true}> </Route>
       </Routes>
     </BrowserRouter>
   );
