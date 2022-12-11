@@ -11,6 +11,7 @@ import SignUpPage from "./components/signup/signup.js";
 import EditProfile from "./components/dashboard/editProfile/index.js";
 import NewEventComponent from "./components/new-event/index";
 import IndividualJob from "./components/dashboard/joblist/individualjob";
+import Externalapi from "./components/externalApi/index.js";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           element={<EditProfile />}
           exact={true}
         ></Route>
+        <Route path="/mytest" element={<Externalapi />} exact={true}></Route>
       </Routes>
     </BrowserRouter>
   );
