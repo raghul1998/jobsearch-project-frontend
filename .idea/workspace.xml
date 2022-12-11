@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d8af9f8-aee9-4422-b256-4c5d5d323e8f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/dashboard/editProfile/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/dashboard/editProfile/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/uploadImageAws/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/new-event/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/new-event/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/new-event/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/new-event/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/signup/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/signup/signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/userThunks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/userThunks.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

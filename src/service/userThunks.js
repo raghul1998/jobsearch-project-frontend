@@ -4,6 +4,7 @@ export const CREATE_USER = "CREATE_USER";
 export const LOGIN_USER = "LOGIN_USER";
 const NEW_USER_API = "http://localhost:4000/api/user/";
 const LOGIN_USER_API = "http://localhost:4000/api/user/login";
+const UPDATE_USER_API = "http://localhost:4000/api/register/user";
 
 export const createUser = (newUser) => {
   console.log("user" + String(newUser));
@@ -21,4 +22,14 @@ export const loginUser = (email, password) => {
   return fetch(`${LOGIN_USER_API}/${email}/${password}`).then((response) =>
     response.json()
   );
+};
+
+export const updateUser = (id, user) => {
+  return fetch(`${UPDATE_USER_API}/${id}`, {
+    method: "PUT",
+    body: JSON.stringify(user),
+    headers: {
+      "content-type": "application/json",
+    },
+  }).then((response) => response.json());
 };
