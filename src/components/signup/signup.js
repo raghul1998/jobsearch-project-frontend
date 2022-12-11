@@ -2,7 +2,7 @@ import * as Yup from 'yup';
 import React from "react";
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import "./signUp.css";
-import {Link, useHistory} from "react-router-dom";
+import {Link} from "react-router-dom";
 import * as alertService from "react-dom/test-utils";
 import setUpProfile from "../../service/userService";
 import {createUser} from "../../service/userThunks.js"

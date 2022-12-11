@@ -1,9 +1,9 @@
 import React from "react";
 import "./newEvent.css";
-import {useHistory} from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const NewEvent = (post) => {
-    const history = useHistory();
+    const history = useNavigate();
 
     const goToEventPage = (post) => {
         localStorage.setItem('eventIdForEventPage', post["post"]["_id"]);

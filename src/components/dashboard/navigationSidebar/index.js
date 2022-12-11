@@ -1,9 +1,8 @@
 import React from "react";
 import './index.css';
-import {useHistory} from "react-router-dom";
-import {Link} from "react-router-dom";
+import {Link,useNavigate} from "react-router-dom";
 const NavigationBar = () => {
-    const history = useHistory();
+    const history = useNavigate();
 
     const logoutUser = () => {
         localStorage.setItem('userId', '');
@@ -13,7 +12,7 @@ const NavigationBar = () => {
         localStorage.setItem('eventIdForEventPage', '');
         localStorage.setItem('imageUrl','');
         localStorage.setItem('userName', '');
-        history.push("/");
+        history("/");
     }
     return(
         <>

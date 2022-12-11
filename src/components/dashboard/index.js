@@ -3,23 +3,24 @@ import "../../assets/css-dashboard/w3.css";
 import "../../assets/css-dashboard/w3-theme-blue-grey.css";
 import "../../assets/css-dashboard/css.css";
 import "./dashboard.css";
-import {useHistory} from "react-router-dom";
-import Profile from "./profile";"./profile/index";
+import Profile from "./profile/index";
 import TodaysEventList from "./todayEvents/index";
+import { useNavigate } from 'react-router-dom';
+import NavigationBar from "./navigationSidebar";
 
 const dashboard = () => {
     const userRole = localStorage.getItem('userRole');
-    let history = useHistory();
+    let history = useNavigate();
     
     const goToNewEventPage = () => {
-      history.push("/new-event");
+      history("/new-event");
     }
 
     return(
         <>
             <div className="row mt-2 wap-outer-feed mb-5">
                 <div className="col-12">
-                    <NavigationSidebar/>
+                    <NavigationBar/>
                 </div>
             </div>
             <div className="row mt-2 wap-outer-feed">

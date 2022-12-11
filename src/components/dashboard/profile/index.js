@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from "react";
 import "./index.css";
-import {useHistory} from "react-router-dom";
 import {getPresentUser} from "../../../service/profileService";
+import { useNavigate } from 'react-router-dom';
 
-const profile = () => {
+const Profile = () => {
     const [presentUser, setPresentUser] = useState(null);
-    const history = useHistory();
+    const history = useNavigate();
 
     useEffect(() => {
         let userId = localStorage.getItem('userId').toString();
@@ -18,11 +18,11 @@ const profile = () => {
     }, [])
 
     const editProfile = () => {
-        history.push("/edit-profile");
+        history("/edit-profile");
     }
     return(
         <>
-            {presentUser != null &&
+            {
             <div className="row mt-auto ">
                 <div className="col-xl-12 col-lg-12 col-md-6 col-sm-6 mt-80">
                     <div className="card bg-white">
@@ -50,4 +50,4 @@ const profile = () => {
         </>
     );
 }
-export default profile;
+export default Profile;
