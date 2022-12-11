@@ -4,8 +4,8 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import "./signUp.css";
 import { Link } from "react-router-dom";
 import { createUser } from "../../service/userThunks.js";
-import { alertService } from '../../service/alertService';
-import { useNavigate } from 'react-router-dom';
+import { alertService } from "../../service/alertService";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   let history = useNavigate();
@@ -52,8 +52,10 @@ const SignUp = () => {
     // debugger;
     createUser(user)
       .then(() => {
-        alertService.success('Sign Up was  successful', { keepAfterRouteChange: true });
-        history('/login');
+        alertService.success("Sign Up was  successful", {
+          keepAfterRouteChange: true,
+        });
+        history("/login");
         console.log("User created");
       })
       .catch((error) => {
@@ -155,7 +157,9 @@ const SignUp = () => {
                             type="date"
                             className={
                               "form-control" +
-                              (errors.dateOfBirth && touched.dateOfBirth ? " is-invalid" : "")
+                              (errors.dateOfBirth && touched.dateOfBirth
+                                ? " is-invalid"
+                                : "")
                             }
                           />
                           <ErrorMessage
@@ -176,7 +180,9 @@ const SignUp = () => {
                             placeholder="gender"
                             className={
                               "form-control" +
-                              (errors.gender && touched.gender ? " is-invalid" : "")
+                              (errors.gender && touched.gender
+                                ? " is-invalid"
+                                : "")
                             }
                           >
                             <option value="">Gender</option>
@@ -216,9 +222,7 @@ const SignUp = () => {
                               University Representative
                             </option>
                             <option value="Student">Student</option>
-                            <option value="Organise and Student">
-                              Company
-                            </option>
+                            <option value="both">Company</option>
                           </Field>
                           <ErrorMessage
                             name="userRole"
@@ -238,7 +242,8 @@ const SignUp = () => {
                             as="select"
                             className={
                               "form-control" +
-                              (errors.currentGradLevel && touched.currentGradLevel
+                              (errors.currentGradLevel &&
+                              touched.currentGradLevel
                                 ? " is-invalid"
                                 : "")
                             }
@@ -262,7 +267,9 @@ const SignUp = () => {
                       <Field
                         className={
                           "form-control" +
-                          (errors.phoneNumber && touched.phoneNumber ? " is-invalid" : "")
+                          (errors.phoneNumber && touched.phoneNumber
+                            ? " is-invalid"
+                            : "")
                         }
                         type="number"
                         name="phoneNumber"
