@@ -21,7 +21,11 @@ const NewEvent = (post) => {
                     <p className="txt4">{post["post"]["timeOfEvent"]}</p>
                     <p className="txt5">{post["post"]["eventName"]}</p>
 
-                    <p><button className="btn btn-primary" onClick={() => goToEventPage(post)}>Read More</button></p>
+                    <div>
+                        <button className="custom-button mt-3" style={{marginLeft: "0px"}} onClick={() => goToEventPage(post)}>
+                            Read More
+                        </button>
+                    </div>
 
                 </div>
 

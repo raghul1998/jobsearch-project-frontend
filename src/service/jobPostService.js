@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-//const API_BASE = process.env.REACT_APP_API_BASE;
-const API_BASE = "http://localhost:4000";
+const API_BASE = process.env.REACT_APP_API_BASE;
+//const API_BASE = "http://localhost:4000";
 
 const JOB_API = `${API_BASE}/event`;
 const LATEST_POSTS_API = `${API_BASE}/latestposts`;

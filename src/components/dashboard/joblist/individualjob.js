@@ -33,7 +33,9 @@ const IndividualJob = () => {
                                 (userRole === 'organiser' || userRole === 'both') &&
                                 <div className="ps-5">
                                     <div className="form-group form-button">
-                                        <input type="submit" name="signin" id="signin"  className="form-submit btn btn-primary"
+                                        <input type="submit" name="signin" id="signin"
+                                               className="form-submit btn custom-button"
+                                               style={{color: "#fff", backgroundColor: "#f82"}}
                                                value="Create New Event" onClick={() => goToNewEventPage()}/>
                                     </div>
                                 </div>

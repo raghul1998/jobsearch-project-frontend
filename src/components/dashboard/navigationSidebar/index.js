@@ -24,7 +24,7 @@ const NavigationBar = () => {
                     <Link to="/dashboard" className="w3-bar-item w3-padding-large w3-theme-d4 remove-underline">
                         <i className="fa fa-home w3-margin-right"></i> Career Genie
                     </Link>
-                    <button onClick={() => logoutUser()} className="btn btn-primary w3-right mt-2 me-2">
+                    <button onClick={() => logoutUser()} className="custom-button w3-right mt-2 me-2">
                         Logout
                     </button>
                 </div>

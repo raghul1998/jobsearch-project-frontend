@@ -39,7 +39,7 @@ const Profile = () => {
                             <i className="fa fa-phone fa-fw w3-margin-right w3-text-theme"></i> {presentUser["phoneNumber"]}
                             <i className="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme ms-2"></i> {new Date(presentUser["dateOfBirth"].toString()).getMonth()}/{new Date(presentUser["dateOfBirth"].toString()).getDate()}
                             </p>
-                            <button className="btn btn-primary " onClick={() => editProfile()}>Edit Profile</button>
+                            <button className="custom-button" onClick={() => editProfile()}>Edit Profile</button>
                             <br/>
                             <br/>
                             <br/>

@@ -19,3 +19,24 @@
     color: #fff;
 }
 
+.custom-button {
+    color: #fff;
+    background: #f82;
+    border: 2px solid #f82;
+    transition: all ease-in-out 0.3s;
+    padding: 7px 22px;
+    margin: 0 0 0 15px;
+    border-radius: 10px;
+    font-size: 13px;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.custom-button:hover {
+    cursor: pointer;
+    background: lightcoral;
+}
+.custom-button:focus {
+    color: #fff;
+}
+

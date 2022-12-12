@@ -245,8 +245,8 @@ const NewEvent = () => {
                         <button
                           type="submit"
                           disabled={isSubmitting}
-                          className="btn btn-primary"
-                        >
+                          className="btn custom-button"
+                          style={{color: "#fff", backgroundColor: "#f82"}}>
                           {isSubmitting && (
                             <span className="spinner-border spinner-border-sm mr-1"></span>
                           )}
@@ -255,11 +255,13 @@ const NewEvent = () => {
                         <Link to="/dashboard" className="btn btn-link">
                           Cancel
                         </Link>
+                        <br/>
                       </div>
                     </div>
                   </Form>
                 )}
               </Formik>
+              <br/>
             </div>
             <div className="col-md-5 pt-5">
               <figure>
