@@ -1,7 +1,8 @@
 
 // Backend URI is - https://node-backend-career-genie.onrender.com
 
-const API_BASE = process.env.REACT_APP_API_BASE;
+//const API_BASE = process.env.REACT_APP_API_BASE;
+const API_BASE = "http://localhost:4000";
 const EVENT_API = `${API_BASE}/event`;
 const LATEST_POSTS_API = `${API_BASE}/latestposts`;
 
