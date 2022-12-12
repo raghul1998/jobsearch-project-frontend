@@ -28,7 +28,7 @@ function App() {
           element={<NewEventComponent />}
           exact={true}
         ></Route>
-        <Route path="/" element={<LandingComponent />} exact={true}></Route>
+        <Route index path="/" element={<LandingComponent />} exact={true}></Route>
         <Route path="/login" element={<LoginComponent />} exact={true}></Route>
         <Route path="/job-event" element={<IndividualJob />} exact={true}>
           {" "}
