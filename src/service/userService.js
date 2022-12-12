@@ -1,5 +1,5 @@
 import axios from "axios";
-const CREATE_USER_API = "http://localhost:4000/api/user";
+const CREATE_USER_API = "https://node-backend-career-genie.onrender.com/api/user";
 
 export const setUpProfile = async (profile) => {
   const response = await axios.post(CREATE_USER_API, profile);

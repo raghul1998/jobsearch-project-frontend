@@ -1,4 +1,4 @@
-const USER_SEARCH_API = 'http://localhost:4000/api/user';
+const USER_SEARCH_API = 'https://node-backend-career-genie.onrender.com/api/user';
 
 export const getPresentUser = (id) => {
     return(

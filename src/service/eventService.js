@@ -1,5 +1,5 @@
-const EVENT_API = 'http://localhost:4000/event';
-const LATEST_POSTS_API = 'http://localhost:4000/latestposts';
+const EVENT_API = 'https://node-backend-career-genie.onrender.com/event';
+const LATEST_POSTS_API = 'https://node-backend-career-genie.onrender.com/latestposts';
 
 export const createEvent = (newEvent) => {
     return (
