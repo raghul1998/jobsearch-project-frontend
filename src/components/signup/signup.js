@@ -358,7 +358,7 @@ const SignUp = () => {
                         )}
                         Sign Up
                       </button>
-                      <Link to="/" className="ps-2">
+                      <Link to="/login" className="ps-2">
                         Already have an account? Sign In
                       </Link>
                     </div>

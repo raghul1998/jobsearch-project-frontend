@@ -1,4 +1,5 @@
-const USER_SEARCH_API = 'https://node-backend-career-genie.onrender.com/api/user';
+const API_BASE = process.env.REACT_APP_API_BASE;
+const USER_SEARCH_API = `${API_BASE}/api/user`;
 
 export const getPresentUser = (id) => {
     return(

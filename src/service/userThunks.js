@@ -2,9 +2,11 @@ import * as service from "./userService.js";
 
 export const CREATE_USER = "CREATE_USER";
 export const LOGIN_USER = "LOGIN_USER";
-const NEW_USER_API = "https://node-backend-career-genie.onrender.com/api/user/";
-const LOGIN_USER_API = "https://node-backend-career-genie.onrender.com/api/user/login";
-const UPDATE_USER_API = "https://node-backend-career-genie.onrender.com/api/register/user";
+const API_BASE = process.env.REACT_APP_API_BASE;
+
+const NEW_USER_API = `${API_BASE}/api/user/`;
+const LOGIN_USER_API = `${API_BASE}/api/user/login`;
+const UPDATE_USER_API = `${API_BASE}/api/register/user`;
 
 export const createUser = (newUser) => {
   console.log("user" + String(newUser));

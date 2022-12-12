@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const LOCALHOST = 'https://node-backend-career-genie.onrender.com';
-const JOB_API = `${LOCALHOST}/event`;
-const LATEST_POSTS_API = 'https://node-backend-career-genie.onrender.com/latestposts';
+const API_BASE = process.env.REACT_APP_API_BASE;
+const JOB_API = `${API_BASE}/event`;
+const LATEST_POSTS_API = `${API_BASE}/latestposts`;
 
 
 export const createJob = async (job) => {

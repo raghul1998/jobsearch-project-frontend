@@ -49,7 +49,7 @@ const LoginComponent = () => {
             <div className="loginImage">
               <figure>
                 <img
-                  src={require(`../../assets/images/loginImage.png`)}
+                  src={require("../../assets/images/login.jpg")}
                   alt="login"
                 />
               </figure>

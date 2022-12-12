@@ -1,5 +1,9 @@
-const EVENT_API = 'https://node-backend-career-genie.onrender.com/event';
-const LATEST_POSTS_API = 'https://node-backend-career-genie.onrender.com/latestposts';
+
+// Backend URI is - https://node-backend-career-genie.onrender.com
+
+const API_BASE = process.env.REACT_APP_API_BASE;
+const EVENT_API = `${API_BASE}/event`;
+const LATEST_POSTS_API = `${API_BASE}/latestposts`;
 
 export const createEvent = (newEvent) => {
     return (

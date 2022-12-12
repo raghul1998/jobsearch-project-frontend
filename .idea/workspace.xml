@@ -3,9 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="2d8af9f8-aee9-4422-b256-4c5d5d323e8f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing/landing.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing/landing.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing/recentjobmap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing/recentjobmap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing/recentjobs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing/recentjobs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/loginImage.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/eventService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/eventService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/jobPostService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/jobPostService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/profileService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/profileService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/userService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/userService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/userThunks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/userThunks.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
