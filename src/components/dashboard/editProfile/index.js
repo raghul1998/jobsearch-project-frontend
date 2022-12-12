@@ -7,6 +7,7 @@ import UploadImageAws from "../../uploadImageAws";
 import { updateUser } from "../../../service/userThunks";
 import { alertService } from "../../../service/alertService";
 import NavigationSidebar from "../navigationSidebar/index";
+import imgEdit from "../../../assets/images/edit-1.png";
 
 const EditProfile = () => {
   let history = useNavigate();
@@ -229,7 +230,7 @@ const EditProfile = () => {
                   {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
                   <figure>
                     <img
-                      src="https://github.com/Sanjana-Nalawade/repoForAssetsOfProject/blob/main/undraw_personal_information_re_vw8a.png?raw=true"
+                      src= {imgEdit}
                       height="500px"
                       alt="sing up image"
                     />
