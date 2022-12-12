@@ -9,7 +9,6 @@ const Profile = () => {
     // 
 
     useEffect(() => {
-        console.log("ninside");
         let userId = localStorage.getItem('userId').toString();
         getPresentUser(userId).then((user) => {
             setPresentUser(user);

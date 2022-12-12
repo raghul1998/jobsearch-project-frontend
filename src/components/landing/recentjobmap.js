@@ -11,7 +11,7 @@ const RecentJobMap = (job) => {
 
     return (
         <>
-            <div className="row schedule-item">
+                <div className="row schedule-item border-0 border-bottom">
                 <div className="col-md-10 col-sm-9">
                     <div className=" col-2 col-sm-1 speaker">
                         <img src={job["image"]} alt="job images"/>
@@ -33,12 +33,13 @@ const RecentJobMap = (job) => {
 
                 <div className="col-md-2 col-sm-1">
                     <br/>
-                    <span className="buy-tickets"
+                    <span className="buy-button"
                        onClick={() => navigateToLogin()}>
                         Apply Here
                     </span>
                 </div>
             </div>
+            <br/>
         </>
     )
 }

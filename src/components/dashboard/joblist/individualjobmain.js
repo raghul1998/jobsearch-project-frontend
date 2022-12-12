@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
-import {getJobByID} from "../../../service/jobPostService";
+import {getJobByID, applyJob, unapplyJob} from "../../../service/jobPostService";
 
 const getDate = (date) => {
     let dateTemp = new Date(date);
@@ -24,19 +24,44 @@ const getDay = (date) => {
 }
 
 const IndividualJobMain = () => {
-    let navigate = useNavigate();
     const jobID = localStorage.getItem('jobIdForJobPage');
     const [job, setJob] = useState({title: ''})
     const [showMore, setShowMore] = useState(null);
+    let [applied, setApplied] = useState(false);
+    let [appliedCount, setAppliedCount] = useState();
 
     useEffect(() => {
         async function getData() {
             const data = await getJobByID(jobID);
             setJob(data);
+            setAppliedCount(data["applies"])
         }
-
         getData();
     }, [])
+
+    if(job["appliedBy"] != null) {
+        for (let i = 0; i < job["appliedBy"].length; i++) {
+            if (job["appliedBy"][i] === localStorage.getItem("userId")) {
+                applied = true;
+            }
+        }
+    }
+
+    useEffect(() => {
+        //console.log("force rerender");
+    }, [applied])
+
+    const applyJobFunction = () => {
+        if (!applied) {
+            setApplied(true)
+            applyJob(localStorage.getItem("userId"), job["_id"]);
+            setAppliedCount(appliedCount + 1)
+        } else {
+            setApplied(false);
+            unapplyJob(localStorage.getItem("userId"), job["_id"]);
+            setAppliedCount(appliedCount - 1)
+        }
+    }
 
     return (
         <div className="section-block">
@@ -80,9 +105,27 @@ const IndividualJobMain = () => {
                     {job["shortDescription"]}
                 </p>
 
-                <button className="btn btn-info">
-                    Apply
-                </button>
+                <div className="mt-3 d-flex flex-row muted-color">
+                    {
+                        !applied &&
+                        <button className="buy-button" style={{marginLeft : "-3px"}} onClick={applyJobFunction}>
+                            Apply
+                        </button>
+                    }
+
+                    {
+                        applied &&
+                        <button className="buy-button" style={{marginLeft : "-3px"}} onClick={applyJobFunction}>
+                            Unapply
+                        </button>
+                    }
+                </div>
+
+                <div className="mt-2 d-flex flex-row muted-color">
+                    <span>
+                        Number of people applied: {appliedCount}
+                    </span>
+                </div>
 
                 <div>
                     {

@@ -51,6 +51,7 @@ const PostMapComponent = (post) => {
                     <hr/>
                 </div>
             </div>
+            <br/>
         </>
     )
 }
