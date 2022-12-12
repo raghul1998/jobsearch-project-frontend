@@ -6,9 +6,8 @@ const NewEvent = (post) => {
     const history = useNavigate();
 
     const goToEventPage = (post) => {
-        localStorage.setItem('eventIdForEventPage', post["post"]["_id"]);
+        localStorage.setItem('jobIdForJobPage', post["post"]["_id"]);
         history("/job-event");
-        window.location.reload(false)
     }
 
     return(
