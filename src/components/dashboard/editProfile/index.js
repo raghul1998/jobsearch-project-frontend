@@ -204,20 +204,22 @@ const EditProfile = () => {
                       />
                     </div>
                     <UploadImageAws />
-                    <p>Upload Your Profile Picture</p>
+                    <p className="mt-1">Upload Your Profile Picture</p>
 
                     <div className="form-group form-button">
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="btn btn-primary"
+                        className="custom-button"
+                        style={{marginLeft: "0px"}}
                       >
                         {isSubmitting && (
                           <span className="spinner-border spinner-border-sm mr-1"></span>
                         )}
                         Update Profile
                       </button>
-                      <Link to="/feedpage" className="btn btn-link">
+                      &nbsp; &nbsp; &nbsp;
+                      <Link to="/feedpage" className="btn btn-link margin">
                         Cancel
                       </Link>
                     </div>

@@ -351,7 +351,8 @@ const SignUp = () => {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="btn btn-primary wap-signup-button"
+                        className="custom-button me-2"
+                        style={{marginLeft: "0px"}}
                       >
                         {isSubmitting && (
                           <span className="spinner-border s-spinner-borderm mr-1"></span>

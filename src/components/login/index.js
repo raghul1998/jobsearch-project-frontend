@@ -126,7 +126,8 @@ const LoginComponent = () => {
                         name="signin"
                         id="signin"
                         disabled={isSubmitting}
-                        className="form-submit btn btn-primary"
+                        className="form-submit btn custom-button"
+                        style={{color: "#fff", backgroundColor: "#f82", marginLeft: "0px"}}
                         value="Log in"
                       />
                     </div>
