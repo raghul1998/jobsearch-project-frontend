@@ -139,3 +139,7 @@ h1 {
 .fa-comments {
     margin-right: 7px
 }
+
+.text-center-style{
+    text-align: center !important;
+}

@@ -24,7 +24,7 @@ const TodaysEventList = () => {
     }, []);
     return (
         <>
-            <h3 className="text-white">Today's Events</h3>
+            <h3 className="text-white text-center-style">Today's Events</h3>
           { posts!=null &&
             posts.map(post =>
                 <div>
