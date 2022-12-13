@@ -34,7 +34,7 @@ const SignUp = () => {
     setStatus();
 
     let profileImage =
-      "https://www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png";
+      "https://mytestcareer.s3.us-east-1.amazonaws.com/22965342.jpg";
 
     let userRole = input["userRole"].toString().toLowerCase();
     const user = {
@@ -352,7 +352,7 @@ const SignUp = () => {
                         type="submit"
                         disabled={isSubmitting}
                         className="custom-button me-2"
-                        style={{marginLeft: "0px"}}
+                        style={{ marginLeft: "0px" }}
                       >
                         {isSubmitting && (
                           <span className="spinner-border s-spinner-borderm mr-1"></span>
