@@ -2,7 +2,7 @@
     /*background-color: #97BEA3;*/
     /*background: url(https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);*/
     /*background: url(https://images.pexels.com/photos/6102433/pexels-photo-6102433.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);*/
-    background: url(https://images.pexels.com/photos/1687341/pexels-photo-1687341.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background: url("../../assets/images/pop.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

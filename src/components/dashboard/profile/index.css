@@ -36,7 +36,7 @@ body {
 }
 
 .job {
-    color: #fa2525;
+    color: #f96f59;
     font-size: 12px;
     font-weight: 700;
     margin-bottom: 8px
@@ -47,7 +47,7 @@ body {
     width: 30px;
     height: 30px;
     color: white;
-    background-color: #fa2525;
+    background-color: #f96f59;
     border-radius: 50%;
     display: flex;
     /*justify-content: center;*/
@@ -65,7 +65,7 @@ body {
 }
 
 .container .card:hover .text-center {
-    background-color: #fa2525;
+    background-color: #f96f59;
     color: white
 }
 

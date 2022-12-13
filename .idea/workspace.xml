@@ -3,7 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="2d8af9f8-aee9-4422-b256-4c5d5d323e8f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/editProfile/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/editProfile/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/signup/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/signup/signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/eventService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/eventService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/jobPostService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/jobPostService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/profileService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/profileService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/studentJobShareService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/studentJobShareService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/userService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/userService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/userThunks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/userThunks.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -37,7 +45,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/2022/fall/webdev/project/webdev-project-frontend/src/assets",
+    "last_opened_file_path": "D:/2022/fall/webdev/project/webdev-project-frontend/src/components/dashboard/joblist",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -49,6 +57,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\2022\fall\webdev\project\webdev-project-frontend\src\components\dashboard\joblist" />
       <recent name="D:\2022\fall\webdev\project\webdev-project-frontend\src\assets" />
       <recent name="D:\2022\fall\webdev\project\webdev-project-frontend\vendors" />
       <recent name="D:\2022\fall\webdev\project\webdev-project-frontend\src" />

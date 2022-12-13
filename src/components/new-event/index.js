@@ -7,6 +7,7 @@ import "./style.css";
 import { createEvent } from "../../service/eventService";
 import { alertService } from "../../service/alertService";
 import UploadImageAws from "../uploadImageAws";
+import editImage from "../../assets/images/edit-2.png"
 // import UploadImageToS3WithNativeSdk from "../UploadImageToS3WithNativeSdk/index";
 // import UploadImageToS3WithReactS3 from '../UploadImageToS3WithReactS3/index';
 import NavigationBar from "../dashboard/navigationSidebar/index";
@@ -245,8 +246,8 @@ const NewEvent = () => {
                         <button
                           type="submit"
                           disabled={isSubmitting}
-                          className="btn btn-primary"
-                        >
+                          className="btn custom-button"
+                          style={{color: "#fff", backgroundColor: "#f82"}}>
                           {isSubmitting && (
                             <span className="spinner-border spinner-border-sm mr-1"></span>
                           )}
@@ -255,16 +256,18 @@ const NewEvent = () => {
                         <Link to="/dashboard" className="btn btn-link">
                           Cancel
                         </Link>
+                        <br/>
                       </div>
                     </div>
                   </Form>
                 )}
               </Formik>
+              <br/>
             </div>
             <div className="col-md-5 pt-5">
               <figure>
                 <img
-                  src="https://github.com/Sanjana-Nalawade/repoForAssetsOfProject/blob/main/undraw_add_information_j2wg.png?raw=true"
+                  src={editImage}
                   alt="sing up image"
                 />
               </figure>

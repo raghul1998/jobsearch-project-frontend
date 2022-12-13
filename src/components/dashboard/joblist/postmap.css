@@ -22,7 +22,7 @@
 }
 .funding-meta {}
 .funding-meta h1 {
-    background: #F8294F;
+    background: #2a2a2a;
     color: #fff;
     border-radius: 4px;
     display: table;
@@ -37,7 +37,7 @@
     margin: 0px 10px 10px 0px;
 }
 .type-meta i.fa {
-    color: #F8294F;
+    color: #2a2a2a;
     margin-right:5px;
 }
 .funding-meta h2{
@@ -138,7 +138,7 @@
 }
 
 .wap-icon{
-    color: #F8294F;
+    color: #2a2a2a;
 }
 
 .wap-add-icon{

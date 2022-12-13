@@ -11,6 +11,7 @@ import SignUpPage from "./components/signup/signup.js";
 import EditProfile from "./components/dashboard/editProfile/index.js";
 import NewEventComponent from "./components/new-event/index";
 import IndividualJob from "./components/dashboard/joblist/individualjob";
+import ShareJob from "./components/dashboard/joblist/sharejob";
 import Externalapi from "./components/externalApi/index.js";
 
 function App() {
@@ -29,7 +30,12 @@ function App() {
           element={<NewEventComponent />}
           exact={true}
         ></Route>
-        <Route path="/" element={<LandingComponent />} exact={true}></Route>
+        <Route
+          index
+          path="/"
+          element={<LandingComponent />}
+          exact={true}
+        ></Route>
         <Route path="/login" element={<LoginComponent />} exact={true}></Route>
         <Route path="/job-event" element={<IndividualJob />} exact={true}>
           {" "}
@@ -39,6 +45,9 @@ function App() {
           element={<EditProfile />}
           exact={true}
         ></Route>
+        <Route path="/job-share-post" element={<ShareJob />} exact={true}>
+          {" "}
+        </Route>
         <Route path="/mytest" element={<Externalapi />} exact={true}></Route>
       </Routes>
     </BrowserRouter>

@@ -7,6 +7,7 @@ import UploadImageAws from "../../uploadImageAws";
 import { updateUser } from "../../../service/userThunks";
 import { alertService } from "../../../service/alertService";
 import NavigationSidebar from "../navigationSidebar/index";
+import imgEdit from "../../../assets/images/edit-1.png";
 
 const EditProfile = () => {
   let history = useNavigate();
@@ -204,20 +205,22 @@ const EditProfile = () => {
                       />
                     </div>
                     <UploadImageAws />
-                    <p>Upload Your Profile Picture</p>
+                    <p className="mt-1">Upload Your Profile Picture</p>
 
                     <div className="form-group form-button">
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="btn btn-primary"
+                        className="custom-button"
+                        style={{marginLeft: "0px"}}
                       >
                         {isSubmitting && (
                           <span className="spinner-border spinner-border-sm mr-1"></span>
                         )}
                         Update Profile
                       </button>
-                      <Link to="/feedpage" className="btn btn-link">
+                      &nbsp; &nbsp; &nbsp;
+                      <Link to="/feedpage" className="btn btn-link margin">
                         Cancel
                       </Link>
                     </div>
@@ -227,7 +230,7 @@ const EditProfile = () => {
                   {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
                   <figure>
                     <img
-                      src="https://github.com/Sanjana-Nalawade/repoForAssetsOfProject/blob/main/undraw_personal_information_re_vw8a.png?raw=true"
+                      src= {imgEdit}
                       height="500px"
                       alt="sing up image"
                     />

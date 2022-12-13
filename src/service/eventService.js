@@ -1,8 +1,13 @@
-const EVENT_API = 'http://localhost:4000/event';
-const LATEST_POSTS_API = 'http://localhost:4000/latestposts';
 
-export const createEvent = (newEvent) =>{
-    return(
+// Backend URI is - https://node-backend-career-genie.onrender.com
+
+const API_BASE = process.env.REACT_APP_API_BASE;
+//const API_BASE = "http://localhost:4000";
+const EVENT_API = `${API_BASE}/event`;
+const LATEST_POSTS_API = `${API_BASE}/latestposts`;
+
+export const createEvent = (newEvent) => {
+    return (
         fetch(EVENT_API, {
             method: 'POST',
             body: JSON.stringify(newEvent),
@@ -19,23 +24,10 @@ export const getAllEvents = () => {
 }
 
 export const searchEvents = (keyword) => {
-    return(
+    return (
         fetch(`${EVENT_API}/${keyword}`)
             .then(response => response.json()))
 }
-
-export  const likeEvent = (uid,eid) => {
-    return(
-        fetch(`${EVENT_API}/${uid}/${eid}/like`)
-            .then(response => response.json()))
-
-}
-export  const dislikeEvent = (uid,eid) => {
-    return (
-        fetch(`${EVENT_API}/${uid}/${eid}/dislike`)
-            .then(response => response.json()))
-}
-
 
 export const getLatestPosts = () => {
     return (
@@ -43,12 +35,10 @@ export const getLatestPosts = () => {
     )
 }
 
-
 export const fetchEventById = (id) =>
     fetch(`${EVENT_API}/${id}/fetch`)
         .then(response => response.json());
 
-
 export default {
-    createEvent, getAllEvents, searchEvents, fetchEventById, getLatestPosts, likeEvent, dislikeEvent
+    createEvent, getAllEvents, searchEvents, fetchEventById, getLatestPosts
 };

@@ -351,14 +351,15 @@ const SignUp = () => {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="btn btn-primary wap-signup-button"
+                        className="custom-button me-2"
+                        style={{marginLeft: "0px"}}
                       >
                         {isSubmitting && (
                           <span className="spinner-border s-spinner-borderm mr-1"></span>
                         )}
                         Sign Up
                       </button>
-                      <Link to="/" className="ps-2">
+                      <Link to="/login" className="ps-2">
                         Already have an account? Sign In
                       </Link>
                     </div>

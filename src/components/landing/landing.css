@@ -1,20 +1,42 @@
-.buy-tickets {
+.buy-button {
     color: #fff;
-    background: #f82249;
+    background: #f82;
+    transition: all ease-in-out 0.3s;
     padding: 7px 22px;
     margin: 0 0 0 15px;
     border-radius: 50px;
-    border: 2px solid #f82249;
-    transition: all ease-in-out 0.3s;
+    border: 2px solid #f82;
     font-weight: 500;
     line-height: 1;
     font-size: 13px;
     white-space: nowrap;
 }
-.buy-tickets:hover {
+.buy-button:hover {
     cursor: pointer;
     background: lightcoral;
 }
-.buy-tickets:focus {
+.buy-button:focus {
     color: #fff;
 }
+
+.custom-button {
+    color: #fff;
+    background: #f82;
+    border: 2px solid #f82;
+    transition: all ease-in-out 0.3s;
+    padding: 7px 22px;
+    margin: 0 0 0 15px;
+    border-radius: 10px;
+    font-size: 13px;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.custom-button:hover {
+    cursor: pointer;
+    background: lightcoral;
+}
+.custom-button:focus {
+    color: #fff;
+}
+

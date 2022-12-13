@@ -2,9 +2,12 @@ import * as service from "./userService.js";
 
 export const CREATE_USER = "CREATE_USER";
 export const LOGIN_USER = "LOGIN_USER";
-const NEW_USER_API = "http://localhost:4000/api/user/";
-const LOGIN_USER_API = "http://localhost:4000/api/user/login";
-const UPDATE_USER_API = "http://localhost:4000/api/register/user";
+const API_BASE = process.env.REACT_APP_API_BASE;
+//const API_BASE = "http://localhost:4000";
+
+const NEW_USER_API = `${API_BASE}/api/user/`;
+const LOGIN_USER_API = `${API_BASE}/api/user/login`;
+const UPDATE_USER_API = `${API_BASE}/api/register/user`;
 
 export const createUser = (newUser) => {
   console.log("user" + String(newUser));

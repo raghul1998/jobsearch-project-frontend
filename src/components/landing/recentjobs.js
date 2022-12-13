@@ -5,7 +5,6 @@ import RecentJobMap from "./recentjobmap";
 
 const RecentJobs = () => {
     const [jobs, setJobs] = new useState(null);
-    const navigate = useNavigate();
 
     useEffect(() => {
         async function getData() {
