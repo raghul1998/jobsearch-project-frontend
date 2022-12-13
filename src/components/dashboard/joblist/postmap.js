@@ -42,7 +42,7 @@ const PostMapComponent = (post) => {
                     </div>
                 </div>
 
-                <img src={post["post"]["image"]} className="img-fluid" alt="Image"/>
+                <img src={post["post"]["image"]} className="img-fluid img-style" alt="Image"/>
 
                 <div className="p-2">
                     <p className="text-primary text-justify">
