@@ -1,3 +1,6 @@
+# Job Search Web Application Project Frontend
+This application lets us post job, search for jobs and as well apply for jobs. Similar to LinkedIn job portal.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
